@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button, { ButtonType, ButtonSize } from './components/Button/button'
-import Alert, {AlertType} from './components/Alert/alert'
-import Menu, {Item} from './components/Menu/menu'
+import Alert, { AlertType } from './components/Alert/alert'
+import Menu, { Item } from './components/Menu/menu'
+import SubMenu from './components/Menu/subMenu';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
 
   // Menu onSelect
   const handleSelect = (key: React.Key) => {
-    console.log(key);  
+    console.log(key);
   }
 
   return (
@@ -37,7 +38,7 @@ function App() {
       <h1>Alert</h1>
       <Button btnType={ButtonType.Primary} onClick={handleShowAlert}>Success Alert</Button>
       <Alert title='提示' type={AlertType.Warning} visible={alertVisible} onCancel={handleCloseAlert}>Success Alert</Alert>
-    
+
       <h1>Menu</h1>
       <Menu onSelect={handleSelect} defaultSelectedKeys='1' mode='vertical'>
         {/* {
@@ -46,6 +47,11 @@ function App() {
         <Item index='1'>菜单1</Item>
         <Item index='2' disabled>菜单2</Item>
         <Item index='3'>菜单3</Item>
+        <SubMenu title='dropdown'>
+          <Item>123</Item>
+          <Item>123</Item>
+          <Item>123</Item>
+        </SubMenu>
       </Menu>
     </div>
   );

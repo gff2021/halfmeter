@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, RenderResult } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event';
 import Menu, { MenuProps } from './menu'
 import MenuItem from './menuItem'
@@ -10,10 +10,10 @@ const defaultMenuProps: MenuProps = {
     className: 'test',
 }
 
-const verticalMenuProps: MenuProps = {
-    mode: 'vertical',
-    defaultSelectedKeys: '1',
-}
+// const verticalMenuProps: MenuProps = {
+//     mode: 'vertical',
+//     defaultSelectedKeys: '1',
+// }
 
 const generateMenu = (props: MenuProps) => {
     return (
