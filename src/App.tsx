@@ -40,7 +40,7 @@ function App() {
       <Alert title='提示' type={AlertType.Warning} visible={alertVisible} onCancel={handleCloseAlert}>Success Alert</Alert>
 
       <h1>Menu</h1>
-      <Menu onSelect={handleSelect} defaultSelectedKeys='1' mode='vertical'>
+      <Menu onSelect={handleSelect} defaultSelectedKeys='1' >
         {/* {
           ['1', '2', '3'].map(item => <Item key={item} index={item}>菜单</Item>)
         } */}

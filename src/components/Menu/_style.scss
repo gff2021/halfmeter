@@ -15,6 +15,11 @@
 
         .sub-menu-list {
             list-style: none;
+            display: none
+        }
+
+        .sub-menu-open {
+            display: block
         }
     }
 
