@@ -3,6 +3,8 @@ import Button, { ButtonType, ButtonSize } from './components/Button/button'
 import Alert, { AlertType } from './components/Alert/alert'
 import Menu, { Item } from './components/Menu/menu'
 import SubMenu from './components/Menu/subMenu';
+import Tabs from './components/Tabs/tabs'
+import TabPane from './components/Tabs/tabPane';
 
 function App() {
 
@@ -18,6 +20,11 @@ function App() {
 
   // Menu onSelect
   const handleSelect = (key: React.Key) => {
+    console.log(key);
+  }
+
+  // Tabs onChange
+  const handleTabsChange = (key: string) => {
     console.log(key);
   }
 
@@ -53,6 +60,19 @@ function App() {
           <Item>123</Item>
         </SubMenu>
       </Menu>
+
+      <h1>Tabs</h1>
+      <Tabs onChange={handleTabsChange}>
+        <TabPane key='1' label='Tab1'>
+          This is Tab1
+        </TabPane>
+        <TabPane key='2' label='Tab2'>
+          This is Tab2
+        </TabPane>
+        <TabPane key='3' label='Tab3'>
+          This is Tab3
+        </TabPane>
+      </Tabs>
     </div>
   );
 }
